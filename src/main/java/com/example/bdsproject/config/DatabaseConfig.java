@@ -20,6 +20,7 @@ public class DatabaseConfig {
     private static String APPLICATION_PROPERTIES = "application.properties";
     private static final Logger logger = LoggerFactory.getLogger(DatabaseConfig.class);
 
+    //nejpraktičtější pro mě to mít tady
     public static void changeScene(ActionEvent event, String fxmlFile) {
         Parent root = null;
         FXMLLoader loader = null;
@@ -34,6 +35,7 @@ public class DatabaseConfig {
         stage.show();
     }
 
+
     public static Connection getConnection() {
         try (InputStream resourceStream = DatabaseConfig.class.getClassLoader().getResourceAsStream(APPLICATION_PROPERTIES)) {
             Properties properties = new Properties();
@@ -44,6 +46,7 @@ public class DatabaseConfig {
             String password = properties.getProperty("datasource.password");
 
             Connection connection = DriverManager.getConnection(url, username, password);
+            //nefungovalo Hikari
             return connection;
         } catch (IOException | NullPointerException | IllegalArgumentException e) {
             logger.error("Configuration of the datasource was not successful.", e);

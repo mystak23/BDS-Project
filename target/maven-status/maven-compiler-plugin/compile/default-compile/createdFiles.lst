@@ -1,5 +1,6 @@
 com/example/bdsproject/controller/LoginController.class
 com/example/bdsproject/controller/DeleteController$2.class
+com/example/bdsproject/controller/MenuController$9.class
 com/example/bdsproject/controller/RegisterController$2.class
 com/example/bdsproject/controller/InsertController$3.class
 com/example/bdsproject/controller/MenuController.class
@@ -8,8 +9,10 @@ com/example/bdsproject/controller/MenuController$4.class
 com/example/bdsproject/controller/LoginController$3.class
 com/example/bdsproject/controller/UpdateController.class
 com/example/bdsproject/controller/UpdateController$3.class
+com/example/bdsproject/config/DatabaseQuery.class
 com/example/bdsproject/controller/DeleteController.class
 com/example/bdsproject/controller/MenuController$5.class
+com/example/bdsproject/config/DatabaseAccess.class
 com/example/bdsproject/controller/UpdateController$1.class
 com/example/bdsproject/Main.class
 com/example/bdsproject/controller/MenuController$7.class

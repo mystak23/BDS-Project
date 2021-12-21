@@ -53,12 +53,10 @@ public class MenuController implements Initializable {
     public static boolean canInject = false;
 
     public void selectQuery(String query) {
-        Connection connection = null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
         ObservableList<ObservableList> data = null;
-        try {
-            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/BDS-project", "postgres", "very1strong2password");
+        try (Connection connection = DatabaseConfig.getConnection()){
             preparedStatement = connection.prepareStatement(query);
             resultSet = preparedStatement.executeQuery();
             data = FXCollections.observableArrayList();
@@ -96,13 +94,6 @@ public class MenuController implements Initializable {
             if (preparedStatement != null) {
                 try {
                     preparedStatement.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-            if (connection != null) {
-                try {
-                    connection.close();
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }

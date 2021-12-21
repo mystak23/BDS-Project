@@ -1,9 +1,11 @@
 /Users/mystak23/Documents/IDEA/BDS-Project/src/main/java/com/example/bdsproject/controller/DeleteController.java
+/Users/mystak23/Documents/IDEA/BDS-Project/src/main/java/com/example/bdsproject/config/DatabaseQuery.java
 /Users/mystak23/Documents/IDEA/BDS-Project/src/main/java/com/example/bdsproject/Main.java
+/Users/mystak23/Documents/IDEA/BDS-Project/src/main/java/com/example/bdsproject/config/DatabaseConfig.java
 /Users/mystak23/Documents/IDEA/BDS-Project/src/main/java/com/example/bdsproject/controller/LoginController.java
 /Users/mystak23/Documents/IDEA/BDS-Project/src/main/java/com/example/bdsproject/controller/RegisterController.java
 /Users/mystak23/Documents/IDEA/BDS-Project/src/main/java/com/example/bdsproject/controller/MenuController.java
 /Users/mystak23/Documents/IDEA/BDS-Project/src/main/java/com/example/bdsproject/controller/InsertController.java
+/Users/mystak23/Documents/IDEA/BDS-Project/src/main/java/com/example/bdsproject/config/DatabaseAccess.java
 /Users/mystak23/Documents/IDEA/BDS-Project/src/main/java/com/example/bdsproject/controller/UpdateController.java
-/Users/mystak23/Documents/IDEA/BDS-Project/src/main/java/com/example/bdsproject/DatabaseConfig.java
 /Users/mystak23/Documents/IDEA/BDS-Project/src/main/java/com/example/bdsproject/App.java

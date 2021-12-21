@@ -12,7 +12,7 @@ import java.sql.SQLException;
 
 public class DatabaseQuery {
 
-    private static final Logger logger = LoggerFactory.getLogger(DatabaseConfig.class);
+    private static final Logger logger = LoggerFactory.getLogger(DatabaseQuery.class);
 
     public static void insertQuery (ActionEvent event, String query) {
         ResultSet resultSet = null;

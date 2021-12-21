@@ -294,14 +294,12 @@ public class InsertController implements Initializable {
                         query = "INSERT INTO public." + table + " (" + label1.getText().toLowerCase(Locale.ROOT) + ", "
                                 + label2.getText().toLowerCase(Locale.ROOT) + ", " + label3.getText().toLowerCase(Locale.ROOT) + ") VALUES ("
                                 + insert1.getText() + ", " + insert2.getText() + ", " + insert3.getText() + ");";
-                        System.out.println(query);
                         break;
                     case 4:
                         query = "INSERT INTO public." + table + " (" + label1.getText().toLowerCase(Locale.ROOT) + ", "
                                 + label2.getText().toLowerCase(Locale.ROOT) + ", " + label3.getText().toLowerCase(Locale.ROOT) + ", "
                                 + label4.getText().toLowerCase(Locale.ROOT) + ") VALUES ("
                                 + insert1.getText() + ", " + insert2.getText() + ", " + insert3.getText() + ", " + insert4.getText() + ");";
-                        System.out.println(query);
                         break;
                     case 5:
                         query = "INSERT INTO public." + table + " (" + label1.getText().toLowerCase(Locale.ROOT) + ", "
@@ -309,7 +307,6 @@ public class InsertController implements Initializable {
                                 + label4.getText().toLowerCase(Locale.ROOT) + ", " + label5.getText().toLowerCase(Locale.ROOT) + ") VALUES ("
                                 + insert1.getText() + ", " + insert2.getText() + ", " + insert3.getText() + ", " + insert4.getText() + ", "
                                 + insert5.getText()  + ");";
-                        System.out.println(query);
                         break;
                     case 6:
                         query = "INSERT INTO public." + table + " (" + label1.getText().toLowerCase(Locale.ROOT) + ", "
@@ -318,7 +315,6 @@ public class InsertController implements Initializable {
                                 + label6.getText().toLowerCase(Locale.ROOT) + ") VALUES ("
                                 + insert1.getText() + ", " + insert2.getText() + ", " + insert3.getText() + ", " + insert4.getText() + ", "
                                 + insert5.getText() + ", " + insert6.getText()  + ");";
-                        System.out.println(query);
                         break;
                     case 7:
                         query = "INSERT INTO public."+ table + " (" + label1.getText().toLowerCase(Locale.ROOT) + ", "
@@ -328,7 +324,6 @@ public class InsertController implements Initializable {
                                 + ") VALUES ("
                                 + insert1.getText() + ", " + insert2.getText() + ", " + insert3.getText() + ", " + insert4.getText() + ", "
                                 + insert5.getText() + ", " + insert6.getText() + ", " + insert7.getText() + ");";
-                        System.out.println(query);
                         break;
                     case 8:
                         query = "INSERT INTO public." + table + " (" + label1.getText().toLowerCase(Locale.ROOT) + ", "
@@ -338,7 +333,6 @@ public class InsertController implements Initializable {
                                 + label8.getText().toLowerCase(Locale.ROOT)+ ") VALUES ("
                                 + insert1.getText() + ", " + insert2.getText() + ", " + insert3.getText() + ", " + insert4.getText() + ", "
                                 + insert5.getText() + ", " + insert6.getText() + ", " + insert7.getText() + ", "+ insert8.getText() + ");";
-                        System.out.println(query);
                         break;
                 }
                 DatabaseQuery.insertQuery(event, query);

@@ -13,7 +13,7 @@ import java.sql.SQLException;
 
 public class DatabaseAccess {
 
-    private static final Logger logger = LoggerFactory.getLogger(DatabaseConfig.class);
+    private static final Logger logger = LoggerFactory.getLogger(DatabaseAccess.class);
 
     public static void signUpUser(ActionEvent event, String username, String password) {
         PreparedStatement psInsert = null;
@@ -121,6 +121,7 @@ public class DatabaseAccess {
         }
     }
 
+    //BCrypt mi nefungoval...
     private static String hashPassword(String password) {
         return org.apache.commons.codec.digest.DigestUtils.sha256Hex(password);
     }
