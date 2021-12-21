@@ -1,7 +1,7 @@
-package com.example.bdsproject.controllers;
+package com.example.bdsproject.controller;
 
-import com.example.bdsproject.configuration.DatabaseConfig;
-import com.example.bdsproject.configuration.DatabaseQueries;
+import com.example.bdsproject.DatabaseConfig;
+import com.example.bdsproject.config.DatabaseQuery;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -9,37 +9,28 @@ import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.*;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TextField;
+
 import java.net.URL;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class UpdateController implements Initializable {
     @FXML
-    public Label tableSelect;
+    private ChoiceBox tableChoice;
     @FXML
-    public Label columnLabel;
+    private ChoiceBox columnChoice;
     @FXML
-    public Label label1;
+    private TextField idInsert;
     @FXML
-    public Label label11;
+    private TextField insertTextField;
     @FXML
-    public ChoiceBox tableChoice;
+    private Button updateButton;
     @FXML
-    public ChoiceBox columnChoice;
+    private Button endProgramButton;
     @FXML
-    public TextField idInsert;
-    @FXML
-    public TextField insertTextField;
-    @FXML
-    public Label mainTextLabel;
-    @FXML
-    public Button updateButton;
-    @FXML
-    public Button endProgramButton;
-    @FXML
-    public Button menuButton;
+    private Button menuButton;
 
     private static String choice;
 
@@ -121,7 +112,7 @@ public class UpdateController implements Initializable {
                 int id = Integer.parseInt(idInsert.getText());
                 String value = insertTextField.getText();
                 System.out.println(table + column + id + value);
-                DatabaseQueries.updateQuery(event, table, id, column, value);
+                DatabaseQuery.updateQuery(event, table, id, column, value);
                 DatabaseConfig.changeScene(event, "Menu.fxml");
             }
         });

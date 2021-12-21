@@ -1,7 +1,7 @@
-package com.example.bdsproject.controllers;
+package com.example.bdsproject.controller;
 
-import com.example.bdsproject.configuration.DatabaseConfig;
-import com.example.bdsproject.configuration.DatabaseQueries;
+import com.example.bdsproject.DatabaseConfig;
+import com.example.bdsproject.config.DatabaseQuery;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -9,23 +9,18 @@ import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.*;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TextField;
+
 import java.net.URL;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class DeleteController implements Initializable {
     @FXML
-    public Label tableSelect;
+    private ChoiceBox tableChoice;
     @FXML
-    public Label idSelect;
-    @FXML
-    public ChoiceBox tableChoice;
-    @FXML
-    public TextField insertTextField;
-    @FXML
-    public Label mainTextLabel;
+    private TextField insertTextField;
     @FXML
     private Button deleteButton;
     @FXML
@@ -55,7 +50,7 @@ public class DeleteController implements Initializable {
             @Override
             public void handle(javafx.event.ActionEvent event) {
                 int ID = Integer.parseInt(insertTextField.getText());
-                DatabaseQueries.deleteQuery(event, choice, ID);
+                DatabaseQuery.deleteQuery(event, choice, ID);
                 DatabaseConfig.changeScene(event, "Menu.fxml");
             }
         });

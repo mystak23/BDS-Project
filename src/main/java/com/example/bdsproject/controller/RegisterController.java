@@ -1,28 +1,31 @@
-package com.example.bdsproject.controllers;
+package com.example.bdsproject.controller;
 
-import com.example.bdsproject.configuration.DatabaseAccess;
-import com.example.bdsproject.configuration.DatabaseConfig;
+import com.example.bdsproject.DatabaseConfig;
+import com.example.bdsproject.config.DatabaseAccess;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.*;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class RegisterController implements Initializable {
     @FXML
-    public TextField usernameTextField;
+    private TextField usernameTextField;
     @FXML
-    public PasswordField passwordTextField;
+    private PasswordField passwordTextField;
     @FXML
-    public PasswordField passwordTextField2;
+    private PasswordField passwordTextField2;
     @FXML
-    public Button registerButton;
+    private Button registerButton;
     @FXML
-    public Button endProgramButton;
+    private Button endProgramButton;
     @FXML
-    public Button loginButton;
+    private Button loginButton;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -40,7 +43,6 @@ public class RegisterController implements Initializable {
                 DatabaseConfig.changeScene(event, "Login.fxml");
             }
         });
-
         registerButton.setOnAction(new javafx.event.EventHandler<javafx.event.ActionEvent>() {
             @Override
             public void handle(javafx.event.ActionEvent event) {

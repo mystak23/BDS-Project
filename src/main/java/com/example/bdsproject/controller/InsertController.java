@@ -1,7 +1,7 @@
-package com.example.bdsproject.controllers;
+package com.example.bdsproject.controller;
 
-import com.example.bdsproject.configuration.DatabaseConfig;
-import com.example.bdsproject.configuration.DatabaseQueries;
+import com.example.bdsproject.DatabaseConfig;
+import com.example.bdsproject.config.DatabaseQuery;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -9,53 +9,52 @@ import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.*;
+import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class InsertController implements Initializable {
     @FXML
-    public Label tableSelect;
+    private Label label1;
     @FXML
-    public Label label1;
+    private Label label2;
     @FXML
-    public Label label2;
+    private Label label3;
     @FXML
-    public Label label3;
+    private Label label4;
     @FXML
-    public Label label4;
+    private Label label5;
     @FXML
-    public Label label5;
+    private Label label6;
     @FXML
-    public Label label6;
+    private Label label7;
     @FXML
-    public Label label7;
+    private Label label8;
     @FXML
-    public Label label8;
+    private Label label9;
     @FXML
-    public Label label9;
+    private ChoiceBox tableChoice;
     @FXML
-    public ChoiceBox tableChoice;
+    private TextField insert1;
     @FXML
-    public TextField insert1;
+    private TextField insert2;
     @FXML
-    public TextField insert2;
+    private TextField insert3;
     @FXML
-    public TextField insert3;
+    private TextField insert4;
     @FXML
-    public TextField insert4;
+    private TextField insert5;
     @FXML
-    public TextField insert5;
+    private TextField insert6;
     @FXML
-    public TextField insert6;
+    private TextField insert7;
     @FXML
-    public TextField insert7;
+    private TextField insert8;
     @FXML
-    public TextField insert8;
-    @FXML
-    public TextField insert9;
+    private TextField insert9;
     @FXML
     private Button insertButton;
     @FXML
@@ -342,7 +341,7 @@ public class InsertController implements Initializable {
                         System.out.println(query);
                         break;
                 }
-                DatabaseQueries.insertQuery(event, query);
+                DatabaseQuery.insertQuery(event, query);
                 DatabaseConfig.changeScene(event, "Menu.fxml");
             }
         });

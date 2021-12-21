@@ -2,19 +2,13 @@ package com.example.bdsproject;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-import javax.swing.*;
 import java.io.IOException;
-import java.net.URL;
 
 public class App extends Application {
-
-    private FXMLLoader loader;
-    private VBox mainStage;
 
     public static void main(String[] args) {
         launch(args);
@@ -22,11 +16,10 @@ public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        Parent root = null;
         try {
-            loader = new FXMLLoader(getClass().getResource("Login.fxml"));
-            mainStage = loader.load();
-            Scene scene = new Scene (mainStage);
-            primaryStage.setScene(scene);
+            root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+            primaryStage.setScene(new Scene(root, 600, 400));
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
